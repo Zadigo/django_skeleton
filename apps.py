@@ -39,6 +39,9 @@ class AppConfig:
                 app_config_class = candidates[0][1]
                 
             try:
+                # Reload the module using the name registered
+                # in the AppConfig class of the app to make
+                # sure that the module exists
                 app_module = import_module(app_config_class.name)
             except:
                 raise

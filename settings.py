@@ -8,7 +8,9 @@ class UserSettings:
 
 
 class Settings:
-    INSTALLED_APPS = ['test_module']
+    # TODO: We should get INSTALLED_APPS
+    # from the settings
+    INSTALLED_APPS = ['test_app']
     
     def __init__(self, dotted_path):
         pass

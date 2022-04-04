@@ -15,6 +15,9 @@ class Manager(QuerySet):
         self.default_manager = None
         self.base_manager = None
         self.auto_created = False
+        
+    def __repr__(self):
+        return f'<{self.__class__.__name__} for {self.model._meta.model_name}>'
 
     def contribute_to_class(self, cls, name):
         self.name = self.name or name
