@@ -1,4 +1,5 @@
 def setup():
-    from django_structure.apps import apps
-    from django_structure.settings import settings
+    from django_skeleton.apps import apps
+    from django_skeleton.settings import settings
+    
     apps.populate(settings.INSTALLED_APPS)

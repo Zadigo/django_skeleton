@@ -104,4 +104,5 @@ class Apps:
             pass
         app_models[model_name] = model
 
+
 apps = Apps(installed_apps=None)
