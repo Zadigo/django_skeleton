@@ -29,14 +29,16 @@ class Query(BaseExpression):
         return self.get_compiler(DEFAULT_DB_ALIAS).as_sql()
 
     def get_compiler(self, using=None, connection=None):
-        # NOTE: using here is by default "default" which
-        # is the default database for Django
+        # NOTE: using here is "default" which
+        # is the default value in DATABASE in
+        # the settings file
         if using is None and connection is None:
-            raise ValueError()
+            raise ValueError("No default database to connect to")
 
         if using:
             connection = connections[using]
 
+        # TODO: Check this workflow
         return connection.database_operations.compiler(self.compiler)(self, connection, using)
 
     def get_count(self):

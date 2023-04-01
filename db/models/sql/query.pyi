@@ -1,10 +1,10 @@
 from typing import Literal, Optional, Tuple
 
-from django_structure.db.models.fields import Field
-from django_structure.db.models.models import Model
-from django_structure.db.models.sql.compiler import SQLCompiler
-from django_structure.db.models.sql.datastructures import BaseTable
-from django_structure.db.utils import BaseConnectionHandler
+from django_skeleton.db.models.fields import Field
+from django_skeleton.db.models.models import Model
+from django_skeleton.db.models.sql.compiler import SQLCompiler
+from django_skeleton.db.models.sql.datastructures import BaseTable
+from django_skeleton.db.utils import BaseConnectionHandler
 
 
 class BaseExpression:

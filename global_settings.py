@@ -4,7 +4,7 @@ BASE_DIR = None
 
 # DATABASES = {
 #     'default': {
-#         'BACKEND': 'django_structure.db.backends.sqlite',
+#         'BACKEND': 'django_skeleton.db.backends.sqlite',
 #         'NAME': 'test.sqlite'
 #     }
 # }

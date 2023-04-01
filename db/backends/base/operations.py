@@ -1,7 +1,7 @@
 from importlib import import_module
 
 class BaseDatabaseOperations:
-    compiler_module = 'django_structure.db.models.sql.compiler'
+    compiler_module = 'django_skeleton.db.models.sql.compiler'
     
     def __init__(self, connection):
         self.connection = connection

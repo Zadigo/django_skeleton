@@ -20,7 +20,7 @@ class Field:
     
     @cached_property
     def cached_col(self):
-        from django_structure.db.models.expressions import Col
+        from django_skeleton.db.models.expressions import Col
         return Col(self.model._meta.db_table, self)
         
     def contribute_to_class(self, cls, name):
@@ -40,7 +40,7 @@ class Field:
     def get_col(self, alias, output_field=None):
         if alias == self.model._meta.db_table and (output_field is None or output_field == self):
             return self.cached_col
-        from django_structure.db.models.expressions import Col
+        from django_skeleton.db.models.expressions import Col
         return Col(self.model._meta.db_table, self)
 
     def select_format(self, compiler, sql, params):
